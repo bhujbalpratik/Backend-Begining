@@ -12,7 +12,11 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "./view");
 
-
+app.get("/login", (req, res) => {
+    res.render("login", {
+        title: "Login Page"
+    });
+});
 
 
 app.use("/user", userRouter);
